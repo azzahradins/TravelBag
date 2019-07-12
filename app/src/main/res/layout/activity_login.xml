@@ -88,7 +88,8 @@
         app:layout_constraintTop_toBottomOf="@id/et_code"
         android:layout_marginTop="32dp"
         android:textSize="18dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:text="Anda hanya dapat melakukan login 1 kali."/>
 
     <Button
         android:layout_width="match_parent"

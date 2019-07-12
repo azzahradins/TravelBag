@@ -21,10 +21,12 @@ public class DestinationInformation extends AppCompatActivity {
         deskripsi = findViewById(R.id.desc);
         hargaNormal = findViewById(R.id.price);
         hargaLiburan = findViewById(R.id.priceHoliday);
+
         //i.putExtra(Key_Detail, new String[]{nama, lokasi, desc, pNormal, pHoliday, image});
         String[] details = getIntent().getStringArrayExtra("Detail");
         assert details != null;
         Picasso.get().load(details[5]).into(gambar);
+
         nama.setText(details[0]);
         lokasi.setText(details[1]);
         deskripsi.setText(details[2]);
