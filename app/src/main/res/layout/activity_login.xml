@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".LoginActivity"
+    android:layout_margin="16dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/globe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="Login"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image" />
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:textSize="18dp"
+        android:text="Email"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:hint="Masukan email anda"
+        android:layout_marginTop="8dp"/>
+
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18dp"
+        android:text="Password"
+        app:layout_constraintTop_toBottomOf="@id/et_email"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:hint="Masukan Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/login_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18dp"
+        android:text="Login Code"
+        app:layout_constraintTop_toBottomOf="@id/et_password"/>
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/login_code"
+        android:hint="Masukan Kode Login (Angka)"
+        android:inputType="number"
+        android:maxLength="4"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/login_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_code"
+        android:layout_marginTop="32dp"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_default"
+        android:text="Log In"
+        android:onClick="Login"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/login_info"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
